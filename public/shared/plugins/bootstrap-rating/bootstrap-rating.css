@@ -1,0 +1,14 @@
+.rating-symbol {
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px double transparent;
+    font-size: 13px;
+}
+
+.rating-symbol-empty {
+    color: rgb(100, 100, 100) !important;
+}
+
+.rating-symbol-filled {
+    color: rgb(241, 155, 75) !important;
+}
