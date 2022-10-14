@@ -18,7 +18,23 @@
 					<div class="row gx-0 py-5">
 						<div class="col-xl-10 mx-auto">
 							<div class="row gy-10 gx-lg-8 gx-xl-12">
-                                <form method="post" action="">
+                                <form method="post" action="{{route('saveOldAgent',$id)}}">
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                    @if (Session::has('success'))
+
+                                        <div class="alert alert-success">
+
+                                            {{ Session::get('success') }}</div>
+
+                                    @endif
                                     @csrf
                                     <div class="messages"></div>
                                     <div class="row gx-4">
@@ -40,7 +56,7 @@
 
 											<div class="col-md-6">
 												<div class="form-floating mb-4">
-													<input id="form_email" type="text" name="nsa" class="form-control" placeholder="jane.doe@example.com" required>
+													<input id="form_email" type="text" name="address" class="form-control" placeholder="jane.doe@example.com" required>
 													<label for="form_email">New Store address *</label>
 												</div>
 											</div>
@@ -117,22 +133,22 @@
 
                                             <div class="col-md-6">
 												<div class="form-floating mb-4">
-													<input id="form_email" type="text" name="ntn" class="form-control" placeholder="500" required>
+													<input id="form_email" type="text" name="htn" class="form-control" placeholder="500" required>
 													<label for="form_email">Highest numbers of transactions in a month? 1-1000 *</label>
 												</div>
 											</div>
 											<!-- /column -->
 
 
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
 												<div class="form-floating mb-4">
-													<input id="form_email" type="text" name="ntneeded" class="form-control" placeholder="jane.doe@example.com" required>
+													<input id="form_email" type="text" name="tnos" class="form-control" placeholder="jane.doe@example.com" required>
 													<label for="form_email">How many terminals do you need more? 1-100 *</label>
 													<div class="valid-feedback">
 												</div>
 											</div>
 											<!-- /column -->
-                                                <div class="col-md-6">
+                                                <div class="col-md-12">
                                                     <div class="form-floating mb-4">
                                                         <textarea id="form_message" name="statelocation" class="form-control" placeholder="FCT: Capital hub abuja" style="height: 150px"></textarea>
                                                         <label for="form_message">State and Shop location *</label>

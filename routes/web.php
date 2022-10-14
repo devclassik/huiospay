@@ -23,7 +23,7 @@ Route::get('/contact', [App\Http\Controllers\Controller::class, 'homeContact']);
 Route::get('/setupAccount', [App\Http\Controllers\Controller::class, 'homeSetup']);
 Route::post('/saveSetup', [App\Http\Controllers\Controller::class, 'saveSetup'])->name('saveSetup');
 Route::get('/yesAccount/{id}', [App\Http\Controllers\Controller::class, 'yesAgent']);
-Route::get('/yesAccounts/{id}', [App\Http\Controllers\Controller::class, 'yesAgentSetup'])->name('saveOldAgent');
+Route::post('/yesAccounts/{id}', [App\Http\Controllers\Controller::class, 'yesAgentSetup'])->name('saveOldAgent');
 
 Route::get('/noAccount/{id}', [App\Http\Controllers\Controller::class, 'noAgent']);
 Route::post('/noAccounts/{id}', [App\Http\Controllers\Controller::class, 'noAgentSetup'])->name('saveNewAgent');

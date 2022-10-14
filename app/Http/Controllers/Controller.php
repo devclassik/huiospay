@@ -9,6 +9,8 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMailable;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
@@ -84,6 +86,7 @@ class Controller extends BaseController
     /**this method control saving the free merchant fully */
     public function noAgentSetup(Request $request,$id)
     {
+//        dd($request);
         //for picture upload
         $pictureName = $request->picture->getClientOriginalName();
         $picturePath = 'picture' . $pictureName;
@@ -101,6 +104,7 @@ class Controller extends BaseController
             'pt'                => 'required',
             'state'             => 'required',
             'address'           => 'required',
+            'htn'               => 'required',
             'bpn'               => 'required',
             'ocn'               => 'required',
             'bpe'               => 'required',
@@ -109,7 +113,6 @@ class Controller extends BaseController
             'cpt'               => 'required',
 
         ]);
-        $userId = $request->id;
         Business_Detail::create([
             'user_id'                                     =>$id,
             'business_type'                               => $request->st,
@@ -127,8 +130,14 @@ class Controller extends BaseController
             'owner_business_person_email'                 => $request->cpe,
             'owner_business_person_tel'                   => $request->cpt,
             'image_path'                                  => $picturePath,
-
+            'highest_no_transaction'                      => $request->htn,
         ]);
+        $details = [
+            'title' => $request->bt.' '.$request->address,
+            'body' => $request->tnos.' '.$request->htn
+        ];
+//        dd($details);
+        \Mail::to('alomajaopemipo8@gmail.com')->send(new SendMailable($details));
         return redirect('/');
 //        return view('frontend.pages.yesHuiospayAgent');
     }
@@ -138,6 +147,42 @@ class Controller extends BaseController
     {
         //        dd($id);
         return view('frontend.pages.yesHuiospayAgent', compact('id'));
+    }
+
+    /**this method control saving the free merchant fully */
+    public function yesAgentSetup(Request $request,$id)
+    {
+//        dd($id, $request);
+
+        $this->validate($request, [
+            'nmlbn'                       => 'required',
+            'nsn'                         => 'required',
+            'address'                     => 'required',
+            'state'                       => 'required',
+            'nst'                         => 'required',
+            'htn'                         => 'required',
+            'tnos'                        => 'required',
+
+        ]);
+        Business_Detail::create([
+            'user_id'                                     =>$id,
+            'new_merchant_legal_name'                     =>$request->nmlbn,
+            'new_store_name'                              =>$request->nsn,
+            'business_address'                            => $request->address,
+            'business_state'                              => $request->state,
+            'business_type'                               => $request->nst,
+            'highest_no_transaction'                      => $request->htn,
+            'no_terminal_needed'                          => $request->tnos,
+            'state_location'                              => $request->statelocation,
+        ]);
+        $details = [
+            'title' => $request->nmlbn.' '.$request->address,
+            'body' => $request->tnos.' '.$request->htn
+        ];
+//        dd($details);
+        \Mail::to('alomajaopemipo8@gmail.com')->send(new SendMailable($details));
+
+        return redirect('/');
     }
 
 

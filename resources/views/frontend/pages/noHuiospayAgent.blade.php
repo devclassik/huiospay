@@ -19,6 +19,15 @@
 						<div class="col-xl-10 mx-auto">
 							<div class="row gy-10 gx-lg-8 gx-xl-12">
                                 <form method="post" action="{{ route('saveNewAgent',$id) }}" enctype="multipart/form-data" >
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                     @if (Session::has('success'))
 
                                         <div class="alert alert-success">
@@ -49,7 +58,6 @@
                                                     <option value="revenue office">revenue office</option>
                                                     <option value="Others">Others</option>
                                                 </select>
-
                                             </div>
                                         </div>
 											<!-- /column -->
@@ -147,10 +155,17 @@
 											</div><br><br><br>
 											<!-- /column -->
 
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-floating mb-4">
                                                 <input id="form_email" type="text" name="address" class="form-control" placeholder="Jabi, Abuja" required>
                                                 <label for="form_email">Business Address *</label>
+                                            </div>
+                                        </div>
+                                        <!-- /column -->
+                                        <div class="col-md-6">
+                                            <div class="form-floating mb-4">
+                                                <input id="form_email" type="number" name="htn" class="form-control" placeholder="500" required>
+                                                <label for="form_email">Highest numbers of transactions in a month? 1-1000 *</label>
                                             </div>
                                         </div>
                                         <!-- /column -->

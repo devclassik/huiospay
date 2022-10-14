@@ -29,7 +29,10 @@ class Business_Detail extends Model
         'owner_business_person_name',
         'owner_business_person_email',
         'owner_business_person_tel',
-        'image_path'
+        'image_path',
+        'new_merchant_legal_name',
+        'new_store_name',
+        'highest_no_transaction'
     ];
 
     public function businessRecord()
