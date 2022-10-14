@@ -1,6 +1,7 @@
 
 	@extends('layouts.front')
 	@section('content')
+        @include('sweetalert::alert')
 		<section class="wrapper bg-light home-hero hero-wave">
 			<div class="container pt-18 pb-10" style="z-index: 5; position:relative">
 				<div class="row gx-lg-0 gx-xl-8 gy-10 gy-md-13 gy-lg-0 mb-7 mb-md-10 mb-lg-16 align-items-center">

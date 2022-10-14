@@ -28,6 +28,7 @@
                                             </ul>
                                         </div>
                                     @endif
+                                    @include('sweetalert::alert')
                                     @if (Session::has('success'))
 
                                         <div class="alert alert-success">

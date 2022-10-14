@@ -67,10 +67,13 @@ class Controller extends BaseController
         ]);
 //        dd($data->id); //the id of created user
         if ($request->iha === 'no'){
-            Session::flash('success', "Account created Successfully,");
+            Alert::success('Congrats', 'You\'ve Successfully Registered');
+//            Session::flash('success', "Account created Successfully,");
             return redirect('noAccount/'.$data->id);
         }
-        Session::flash('success', "Account Created Successfully,");
+//        Session::flash('success', "Account Created Successfully,");
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
+
         return redirect('yesAccount/'.$data->id);
 //        return view('frontend.pages.yesHuiospayAgent');
 
@@ -138,6 +141,8 @@ class Controller extends BaseController
         ];
 //        dd($details);
         \Mail::to('alomajaopemipo8@gmail.com')->send(new SendMailable($details));
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
+
         return redirect('/');
 //        return view('frontend.pages.yesHuiospayAgent');
     }
@@ -181,7 +186,7 @@ class Controller extends BaseController
         ];
 //        dd($details);
         \Mail::to('alomajaopemipo8@gmail.com')->send(new SendMailable($details));
-
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
         return redirect('/');
     }
 

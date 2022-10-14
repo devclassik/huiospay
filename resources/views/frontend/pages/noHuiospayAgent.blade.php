@@ -28,13 +28,14 @@
                                             </ul>
                                         </div>
                                     @endif
-                                    @if (Session::has('success'))
+                                    @include('sweetalert::alert')
+{{--                                    @if (Session::has('success'))--}}
 
-                                        <div class="alert alert-success">
+{{--                                        <div class="alert alert-success">--}}
 
-                                            {{ Session::get('success') }}</div>
+{{--                                            {{ Session::get('success') }}</div>--}}
 
-                                    @endif
+{{--                                    @endif--}}
                                     @csrf
                                     <div class="messages"></div>
                                     <div class="row gx-4">
