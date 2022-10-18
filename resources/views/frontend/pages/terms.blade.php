@@ -146,4 +146,4 @@
 		</div>
     </section>
     <!-- end privacy policy section -->
-@stop
+@endsection

@@ -28,5 +28,5 @@
                 @endif
             </div>
         </div>
-    </section>    
-@stop
+    </section>
+@endsection

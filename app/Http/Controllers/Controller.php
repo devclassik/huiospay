@@ -220,6 +220,12 @@ class Controller extends BaseController
         return view('frontend.pages.faq');
     }
 
+    /**this method control the setup view of registered merchant*/
+    public function homeList()
+    {
+        $merchants = AccountSetup::Paginate(5);
+        return view('frontend.pages.user-list', compact('merchants'));
+    }
 
 
 }

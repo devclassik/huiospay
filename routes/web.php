@@ -25,6 +25,7 @@ Route::get('/privacy', [App\Http\Controllers\Controller::class, 'homePrivacy']);
 Route::get('/terms', [App\Http\Controllers\Controller::class, 'homeTerms']);
 Route::get('/agreement', [App\Http\Controllers\Controller::class, 'homeAgreement']);
 Route::get('/faqs', [App\Http\Controllers\Controller::class, 'homeFaq']);
+Route::get('/list', [App\Http\Controllers\Controller::class, 'homeList']);
 Route::get('/setupAccount', [App\Http\Controllers\Controller::class, 'homeSetup']);
 Route::post('/saveSetup', [App\Http\Controllers\Controller::class, 'saveSetup'])->name('saveSetup');
 Route::get('/yesAccount/{id}', [App\Http\Controllers\Controller::class, 'yesAgent']);
