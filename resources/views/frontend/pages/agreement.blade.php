@@ -1,11 +1,8 @@
-@php $title=$page->title; @endphp
-@php $author=$settings->company; @endphp
-@php $keywords=$settings->keywords; @endphp
-@php (empty($page->description))?$settings->description:$page->description; @endphp
+
 @extends('layouts.front')
 @section('content')
     <!-- merchant agreement section -->
-	
+
 	<section class="section section-job-description gradient-light--upright pt-5">
         <div class="container">
 			<div class="row pb-20">
@@ -36,7 +33,7 @@
 						</nav>
 					</div>
 				</aside>
-				
+
 				<aside class="col-xl-2 order-xl-3 sidebar sticky-sidebar mt-md-0 py-16 d-none d-xl-block">
 					<div class="widget">
 						<h6 class="widget-title fs-17 mb-2 ps-xl-5">{{$page->title}}</h6>
@@ -57,7 +54,7 @@
 						<h2 class="mb-5">Overview</h2>
 						<div class="card">
 							<div class="card-body">
-								<p>Necessary cookies are essential for the healthy performance of our website infrastructure. Cookies are designed to provide effectiveness, thus, ensuring smooth performance of security features of the web infrastructure.</p> 
+								<p>Necessary cookies are essential for the healthy performance of our website infrastructure. Cookies are designed to provide effectiveness, thus, ensuring smooth performance of security features of the web infrastructure.</p>
 							</div>
 						</div>
 					</section>
@@ -151,7 +148,7 @@
 					</section>
 				</div>
 			</div>
-		</div>        
+		</div>
     </section>--}}
     <!-- end privacy policy section -->
 @stop

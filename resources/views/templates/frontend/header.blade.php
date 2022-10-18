@@ -35,12 +35,11 @@
             <link rel="stylesheet" type="text/css" href="{{asset('front/css/theme.css')}}"/>
             <!-- plugins -->
             <link rel="stylesheet" type="text/css" href="{{asset('shared/css/fontawesome-pro/css/all.css')}}"/>
-            <link rel="stylesheet" type="text/css" href="{{asset('shared/plugins/toast/dist/jquery.toast.min.css')}}"/>
+            <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"/>
             <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
             <title>HuiosPay  - A flexible, modern and secure payment collection platform in Nigeria.</title>
         </head>
         <body class="page-home">
-
             <div id="loading">
                 <div class="load-circle"><span class="one"></span></div>
             </div>
@@ -60,19 +59,29 @@
                                     <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
                                 </div>
                                 <ul class="navbar-nav">
-									<li class="nav-item active"> <a href="/." class="nav-link">Home</a></li>
-									<li class="nav-item dropdown " data-toggle="hover">
+									<li class="nav-item active"> <a href="/" class="nav-link">Home</a></li>
+                                    <li class="nav-item active"> <a href="/about" class="nav-link">About</a></li>
+
+                                    <li class="nav-item dropdown " data-toggle="hover">
 									    <a href="about" data-toggle="collapse" aria-expanded="false" class="nav-link dropdown-toggle ">Company</a>
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item">
-                                                    <a href="/about" class="dropdown-item ">About Us</a>
+                                                    <a href="/about" class="dropdown-item">About Us</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="/contact" class="dropdown-item ">Contact Us</a>
+                                                    <a href="/contact" class="dropdown-item">Contact Us</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/setupAccount" class="dropdown-item">Create Account</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/faqs" class="dropdown-item">FAQ</a>
                                                 </li>
                                             </ul>
 									</li>
-
+                                    <li class="nav-item">
+                                        <a href="/setupAccount" class="nav-link">Account Setup</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="navbar-other ms-lg-4">

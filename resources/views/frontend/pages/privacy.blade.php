@@ -1,9 +1,16 @@
-@php $title=$page->title; @endphp
-@php $author=$settings->company; @endphp
-@php $keywords=$settings->keywords; @endphp
-@php (empty($page->description))?$settings->description:$page->description; @endphp
 @extends('layouts.front')
 @section('content')
+
+    <section class="wrapper bg-softly-primary home-hero hero-wave">
+        <div class="container pt-10 pb-12 pt-md-14 pb-md-16  text-center">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 col-xl-6 mx-auto">
+                    <h1 class="display-1 mb-3">Privacy Policy</h1>
+                    <p class="lead px-lg-5 px-xxl-8">Read our privacy policy; Effective Date: October 28, 2021</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- cookies policy section -->
     <section class="section section-job-description gradient-light--upright pt-5">
         <div class="container">
@@ -13,23 +20,23 @@
 						<h6 class="widget-title fs-17 mb-2">Documents</h6>
 						<nav id="collapse-usage">
 							<ul class="list-unstyled fs-sm lh-sm text-reset">
-								<li><a href="{{route('pages','cookies')}}" class="{{ ($page->slug=='cookies'?'active':'')}}">Cookies Policy</a></li>
-								<li><a href="{{route('pages','privacy')}}" class="{{ ($page->slug=='privacy'?'active':'')}}">Privacy Policy</a></li>
-								<li><a href="{{route('pages','terms')}}" class="{{ ($page->slug=='terms'?'active':'')}}">Terms and Conditions</a></li>
-								<li><a href="{{route('pages','agreement')}}" class="{{ ($page->slug=='agreement'?'active':'')}}">Merchant Service Agreement</a></li>
+								<li><a href="/cookies" class="active">Cookies Policy</a></li>
+								<li><a href="/privacy" class="active">Privacy Policy</a></li>
+								<li><a href="/terms" class="active">Terms and Conditions</a></li>
+								<li><a href="/agreement" class="active">Merchant Service Agreement</a></li>
 							</ul>
 						</nav>
 					</div>
 				</aside>
-				
+
 				<aside class="col-xl-2 order-xl-3 sidebar sticky-sidebar mt-md-0 py-16 d-none d-xl-block">
 					<div class="widget">
-						<h6 class="widget-title fs-17 mb-2 ps-xl-5">{{$page->title}}</h6>
+						<h6 class="widget-title fs-17 mb-2 ps-xl-5">Privacy Policy</h6>
 						<nav class="ps-xl-5">
 							<ul class="list-unstyled fs-sm lh-sm text-reset">
 								<li><a class="scroll" href="#cookies-policy-policy">Policy</a></li>
 								<li><a class="scroll" href="#cookies-policy-cookies">Cookies and Similar Technologies</a></li>
-								<li><a class="scroll" href="#cookies-policy-about">About {{$settings->app}}</a></li>
+								<li><a class="scroll" href="#cookies-policy-about">About Huiospay</a></li>
 								<li><a class="scroll" href="#cookies-policy-introduction">Introduction</a></li>
 								<li><a class="scroll" href="#cookies-policy-consent">Consent</a></li>
 								<li><a class="scroll" href="#cookies-policy-collection">Collection of Personal Information</a></li>
@@ -37,7 +44,7 @@
 								<li><a class="scroll" href="#cookies-policy-usage">Usage of Information</a></li>
 								<li><a class="scroll" href="#cookies-policy-protection">Protection and Storage of Personal Information</a></li>
 								<li><a class="scroll" href="#cookies-policy-marketing">Marketing</a></li>
-								<li><a class="scroll" href="#cookies-policy-sharing">Sharing Personal Information with other {{$settings->app}} Users and other Third Parties</a></li>
+								<li><a class="scroll" href="#cookies-policy-sharing">Sharing Personal Information with other Huiospay Users and other Third Parties</a></li>
 								<li><a class="scroll" href="#cookies-policy-right">Customer Data Protection Right</a></li>
 								<li><a class="scroll" href="#cookies-policy-remedies">Remedies</a></li>
 								<li><a class="scroll" href="#cookies-policy-changes">Privacy Policy Changes</a></li>
@@ -52,7 +59,7 @@
 						<div class="card">
 							<div class="card-body">
 								<p>This Privacy Policy enlightens users about their privacy rights regarding our collection, use, storage, sharing and protection of personal information.</p>
-								<p>It applies to the Huiospay website and other related sites, applications, services and tools regardless of how they are accessed or used.</p> 
+								<p>It applies to the Huiospay website and other related sites, applications, services and tools regardless of how they are accessed or used.</p>
 							</div>
 						</div>
 					</section>
@@ -66,7 +73,7 @@
 						</div>
 					</section>
 					<section id="cookies-policy-about" class="wrapper py-5">
-						<h2 class="mb-5">About {{$settings->app}}</h2>
+						<h2 class="mb-5">About Huiospay</h2>
 						{{-- <div class="alert alert-blue alert-icon mb-6" role="alert"><i class="uil uil-exclamation-circle"></i> This step aims for advanced users who want to speed up development process and is <strong>optional</strong>. You can still use plain <mark class="doc bg-primary text-white">HTML / CSS / JS</mark> to customize Sandbox. Files you need are located in <code class="folder bg-primary text-white">dev</code></div> --}}
 						<div class="card">
 							<div class="card-body">
@@ -145,7 +152,7 @@
 						</div>
 					</section>
 					<section id="cookies-policy-collection" class="wrapper py-5">
-						<h2 class="mb-5">Sharing Personal Information wit other {{$settings->app}} Users and Third Parties</h2>
+						<h2 class="mb-5">Sharing Personal Information wit other Huiospay Users and Third Parties</h2>
 						<div class="card">
 							<div class="card-body">
 								<p>We may share your personal information with:</p>
@@ -179,12 +186,12 @@
 							<div class="card-body">
 								<p>Our customers have inalienable data protection rights and are entitled to the following:</p>
 								<ul class="listing">
-									<li>The right to access – Customer have the right to request for copies of their personal data. Huiospay may charge a fee for this service</li> 
-									<li>The right to rectification – Customers have the right to: Request that Huiospay to correct any information they believe and have proven have been captured inaccurately. Customers also have the right to: Request Huiospay to complete the information they believe is incomplete.</li> 
-									<li>The right to erasure – Customers have the right to: Request that Huiospay erases their personal data, under certain conditions. These conditions are not limited to regulatory requirements, law enforcement agencies, or where such action may cause disruption to our system.</li> 
-									<li>The right to restrict processing – Customers have the right to: Request that Huiospay restricts the processing of their personal data, under certain conditions.</li> 
+									<li>The right to access – Customer have the right to request for copies of their personal data. Huiospay may charge a fee for this service</li>
+									<li>The right to rectification – Customers have the right to: Request that Huiospay to correct any information they believe and have proven have been captured inaccurately. Customers also have the right to: Request Huiospay to complete the information they believe is incomplete.</li>
+									<li>The right to erasure – Customers have the right to: Request that Huiospay erases their personal data, under certain conditions. These conditions are not limited to regulatory requirements, law enforcement agencies, or where such action may cause disruption to our system.</li>
+									<li>The right to restrict processing – Customers have the right to: Request that Huiospay restricts the processing of their personal data, under certain conditions.</li>
 									<li>The right to object to processing – Customers have the right to: Object to Huiospay processing of your personal data, under certain conditions.</li>
-									<li>The right to data portability – Customers have the right to:  Request that Huiospay transfer the data that have collected to another organization, or directly to them, under certain conditions.</li> 
+									<li>The right to data portability – Customers have the right to:  Request that Huiospay transfer the data that have collected to another organization, or directly to them, under certain conditions.</li>
 								</ul>
 								<p>Customer request based on any of the rights above shall be handled within a reasonable time. Customer may contact us by email or our phone lines.</p>
 							</div>
@@ -202,7 +209,7 @@
 						<h2 class="mb-5">Privacy Policy Change and Privacy</h2>
 						<div class="card">
 							<div class="card-body">
-								<p>Our Privacy Policy are reviewed periodically in line with current regulations and developments in the industry. We issue out communications through our various platforms.</p> 
+								<p>Our Privacy Policy are reviewed periodically in line with current regulations and developments in the industry. We issue out communications through our various platforms.</p>
 								<p>Whenever your personal information is collected, we would inform you of your rights and channels available to exercise your rights. Alternatively, we also let you manage how much information you wish or choose to share.</p>
 							</div>
 						</div>
@@ -213,7 +220,7 @@
 							<div class="card-body">
 								<p>Customers who have concerns, questions about privacy policy or would like to exercise their protection rights can contact us through the following channels:</p>
 								<p><b>Email us:</b> <a href="mailto:info@huiospay.com">info@huiospay.com</a></p>
-								<p><b>Call us:</b> <a href="mailto:+234{{$settings->mobile}}">{{$settings->mobile}}</a></p>
+								<p><b>Call us:</b> <a href="tel:+2348037086670">08037086670</a></p>
 								<p>Customer Contact Centre or write to us at:</p>
 								<p><b>Email:</b> contact@huiospay.com</p>
 								<p><b>Call:</b> +234 8037086670</p>
@@ -222,7 +229,7 @@
 					</section>
 				</div>
 			</div>
-		</div>        
+		</div>
     </section>
     <!-- end privacy policy section -->
 @stop

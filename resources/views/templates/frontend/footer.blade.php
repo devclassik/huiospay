@@ -35,11 +35,11 @@
                             <div class="widget">
                                 <h4 class="widget-title mb-3">Company</h4>
                                 <ul class="list-unstyled  mb-0">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/about">About Us</a></li>
                                     <li><a href="#">Pricing</a></li>
                                     <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -48,11 +48,11 @@
                             <div class="widget">
                                 <h4 class="widget-title mb-3">Legal</h4>
                                 <ul class="list-unstyled  mb-0">
-                                    <li><a href="#">Cookies Policy</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Merchant Service Agreement</a></li>
-                                    <li><a href="#">Frequently Asked Questions</a></li>
+                                    <li><a href="/cookies">Cookies Policy</a></li>
+                                    <li><a href="/privacy">Privacy Policy</a></li>
+                                    <li><a href="/terms">Terms & Conditions</a></li>
+                                    <li><a href="/agreement">Merchant Service Agreement</a></li>
+                                    <li><a href="/faqs">Frequently Asked Questions</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                     <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
                 </svg>
             </div>
-
+            @include('cookie-consent::index')
             <a href="#" class="btn btn-primary rounded-pill mx-1 mb-2 mb-md-0 cookie-policy-modal d-none" data-bs-toggle="modal" data-bs-target="#cookie-policy-modal">Cookie</a>
 			<div class="modal fade modal-pop modal-bottom-center" id="cookie-policy-modal" tabindex="-1">
 				<div class="modal-dialog modal-xl">

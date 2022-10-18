@@ -1,9 +1,16 @@
-@php $title=$page->title; @endphp
-@php $author=$settings->company; @endphp
-@php $keywords=$settings->keywords; @endphp
-@php (empty($page->description))?$settings->description:$page->description; @endphp
 @extends('layouts.front')
 @section('content')
+
+    <section class="wrapper bg-softly-primary home-hero hero-wave">
+        <div class="container pt-10 pb-12 pt-md-14 pb-md-16  text-center">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 col-xl-6 mx-auto">
+                    <h1 class="display-1 mb-3">Terms and Conditions</h1>
+                    <p class="lead px-lg-5 px-xxl-8">Read HuioPay terms and conditions of service</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- cookies policy section -->
     <section class="section section-job-description gradient-light--upright pt-5">
         <div class="container">
@@ -13,18 +20,18 @@
 						<h6 class="widget-title fs-17 mb-2">Documents</h6>
 						<nav id="collapse-usage">
 							<ul class="list-unstyled fs-sm lh-sm text-reset">
-								<li><a href="{{route('pages','cookies')}}" class="{{ ($page->slug=='cookies'?'active':'')}}">Cookies Policy</a></li>
-								<li><a href="{{route('pages','privacy')}}" class="{{ ($page->slug=='privacy'?'active':'')}}">Privacy Policy</a></li>
-								<li><a href="{{route('pages','terms')}}" class="{{ ($page->slug=='terms'?'active':'')}}">Terms and Conditions</a></li>
-								<li><a href="{{route('pages','agreement')}}" class="{{ ($page->slug=='agreement'?'active':'')}}">Merchant Service Agreement</a></li>
+                                <li><a href="/cookies" class="active">Cookies Policy</a></li>
+                                <li><a href="/privacy" class="active">Privacy Policy</a></li>
+                                <li><a href="/terms" class="active">Terms and Conditions</a></li>
+                                <li><a href="/agreement" class="active">Merchant Service Agreement</a></li>
 							</ul>
 						</nav>
 					</div>
 				</aside>
-				
+
 				<aside class="col-xl-2 order-xl-3 sidebar sticky-sidebar mt-md-0 py-16 d-none d-xl-block">
 					<div class="widget">
-						<h6 class="widget-title fs-17 mb-2 ps-xl-5">{{$page->title}}</h6>
+						<h6 class="widget-title fs-17 mb-2 ps-xl-5">Terms and Conditions</h6>
 						<nav class="ps-xl-5">
 							<ul class="list-unstyled fs-sm lh-sm text-reset">
 								<li><a class="scroll" href="#cookies-policy-accessibility">Accessibiligy</a></li>
@@ -49,7 +56,7 @@
 						<div class="card">
 							<div class="card-body">
 								<p>The website IS freely accessible to all users although there might be limitations pending creation of accounts and security/passwords before user can be availed certain products and services.</p>
-								<p>Users are responsible for providing equipment, technologies or software which gain them access to the internet and our site. In other words users will be liable for their internet fees/charges to their service provider.</p> 
+								<p>Users are responsible for providing equipment, technologies or software which gain them access to the internet and our site. In other words users will be liable for their internet fees/charges to their service provider.</p>
 							</div>
 						</div>
 					</section>
@@ -58,7 +65,7 @@
 						<div class="card">
 							<div class="card-body">
 								<p>Transactions on this site are secured and for users to have full functionality/access to our products and services they need to create accounts with appropriate passwords.</p>
-								<p>Users are responsible for the safety and security of their account details. And users account may be disabled due security breaches, abuses or failure to comply with terms and condition.</p> 
+								<p>Users are responsible for the safety and security of their account details. And users account may be disabled due security breaches, abuses or failure to comply with terms and condition.</p>
 							</div>
 						</div>
 					</section>
@@ -84,7 +91,7 @@
 						<div class="card">
 							<div class="card-body">
 								<p>Huiospay is the registered trademark of Huios Finance Limited and owner of the Intellectual property of Huiospay and its platforms.</p>
-								<p>Materials published therein are the property of Huiospay and all unauthorized use may lead to legal action.</p> 
+								<p>Materials published therein are the property of Huiospay and all unauthorized use may lead to legal action.</p>
 							</div>
 						</div>
 					</section>
@@ -97,7 +104,7 @@
 									<li>Unauthorized usage or access (hacking)</li>
 									<li>Unauthorized statement or conduct by or attributed to users</li>
 									<li>Exigencies of business.</li>
-								</ul>									
+								</ul>
 							</div>
 						</div>
 					</section>
@@ -136,7 +143,7 @@
 					</section>
 				</div>
 			</div>
-		</div>        
+		</div>
     </section>
     <!-- end privacy policy section -->
 @stop

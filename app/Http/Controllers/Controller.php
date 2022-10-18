@@ -190,6 +190,35 @@ class Controller extends BaseController
         return redirect('/');
     }
 
+    /**this method control the setup view of cookies */
+    public function homeCookies()
+    {
+        return view('frontend.pages.cookies');
+    }
+
+    /**this method control the setup view of privacyPolicy*/
+    public function homePrivacy()
+    {
+        return view('frontend.pages.privacy');
+    }
+
+    /**this method control the setup view of terms and condition*/
+    public function homeTerms()
+    {
+        return view('frontend.pages.terms');
+    }
+
+    /**this method control the setup view of agreement*/
+    public function homeAgreement()
+    {
+        return view('frontend.pages.agreement');
+    }
+
+    /**this method control the setup view of faqs*/
+    public function homeFaq()
+    {
+        return view('frontend.pages.faq');
+    }
 
 
 
