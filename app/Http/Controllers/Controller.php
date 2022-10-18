@@ -53,7 +53,7 @@ class Controller extends BaseController
             'st'   => 'required',
             'iha'  => 'required'
         ]);
-        $username = "huiospay" . random_int(1000, 9999);
+        $username = "huiospay" . random_int(00000, 99999);
         $password = str::random(4);
         $data =  AccountSetup::create([
             'merchant_legal_business_name'         => $request->mlbn,

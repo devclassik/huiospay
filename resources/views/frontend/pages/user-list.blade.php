@@ -41,7 +41,12 @@
                             </tr>
                             @endforeach
 
-                            {{ $merchants->links() }}
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item"><a>{{ $merchants->links() }}</a></li>
+                                </ul>
+                            </nav>
+
 
                         </table>
                     </div>
