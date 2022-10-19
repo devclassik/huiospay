@@ -1,5 +1,6 @@
 @extends('layouts.front')
 @section('content')
+    @include('sweetalert::alert')
     <section class="wrapper bg-softly-primary home-hero hero-wave">
         <div class="container pt-10 pb-12 pt-md-14 pb-md-16  text-center">
             <div class="row">
@@ -37,7 +38,8 @@
                                 <td>{{$merchant->residential_address}}</td>
                                 <td>{{$merchant->username}}</td>
                                 <td>{{$merchant->created_at->diffForHumans()}}</td>
-                                <td><button class="btn btn-blue">view More</button></td>
+                                <td><button class="btn btn-blue"><a href="{{ route('userDetails',$merchant->id) }}"
+                                        style="text-decoration: none; color: #fff"> view More</a></button></td>
                             </tr>
                             @endforeach
 

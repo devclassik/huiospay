@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-10 col-lg-8 col-xl-6 mx-auto">
                     <h1 class="display-1 mb-3">Frequently Asked Questions (FAQ)</h1>
-{{--                    <p class="lead px-lg-5 px-xxl-8">Below arw the frequently asked question</p>--}}
+{{--                    <p class="lead px-lg-5 px-xxl-8">Below are the frequently asked question</p>--}}
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
     <section class="page-content faqs pb-5">
 		<br/><br/><div class="container header mt-lg-4 mb-5 text-center">
             <!-- <h3 class="display-4 title">Frequently Asked Questions (FAQ)</h3> -->
-             <h3 class="display-4 title">Below arw the frequently asked questions FAQ)</h3>
+             <h3 class="display-4 title">Below are the frequently asked questions FAQ)</h3>
 
 
             <p class="sub-title"> Wesabi helps you to find reliable and skilled artisans in your neighbourhood and to manage your tasks appointments.

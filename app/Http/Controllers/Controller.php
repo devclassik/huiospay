@@ -228,4 +228,21 @@ class Controller extends BaseController
     }
 
 
+    /**this method control the setup view of registered merchant List Details*/
+    public function homeListDetails($id)
+    {
+        $merchants = Business_Detail::where('user_id',$id)->get();
+
+        if(Business_Detail::where('user_id',$id)->first()){
+//            dd($id);
+            return view('frontend.pages.user-list-details', compact('merchants'));
+        }else{
+            Alert::info('OOOPS!', 'User Only have a Singel Terminal');
+            return redirect('/list');
+        }
+
+    }
+
+
+
 }
